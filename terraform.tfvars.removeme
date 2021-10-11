@@ -1,0 +1,24 @@
+
+# THE FOLLOWING S1-RELATED VARIABLES MUST BE CUSTOMIZED FOR YOUR S1 DEPLOYMENT!!!
+s1_site_key                = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=="
+s1_helper_image_repository = "xxxxx.azurecr.io/s1helper"
+s1_agent_image_repository  = "xxxxx.azurecr.io/s1agent"
+docker_server              = "xxxxx.azurecr.io"
+docker_username            = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+docker_password            = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+
+# The following AWS/EKS-related variables can be left as is or be customized as you see fit.
+region          = "us-east-1"
+cluster_name    = "eks-s1-demo"
+node_count      = "2"             # The number of worker nodes to allocate for the EKS cluster
+cluster_version = "1.21"          # The version of Kubernetes you want to use.
+instance_type   = "t2.small"
+
+
+# The following S1-related variables can be left as is or be customized as you see fit.
+s1_repository_pull_secret_name = "s1-repo-pull-secret"
+s1_helper_image_tag            = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+s1_agent_image_tag             = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+s1_namespace                   = "sentinelone"
+helm_release_name              = "s1"
