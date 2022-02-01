@@ -1,10 +1,5 @@
-# Learn Terraform - Provision an EKS Cluster
-
-This repo is a companion repo to the [Provision an EKS Cluster learn guide](https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster), containing
-Terraform configuration files to provision an EKS cluster on AWS.
-
 # terraform-aks-s1
-A terraform template to create a basic AKS cluster and auto-install the SentinelOne Agent for K8s.
+A terraform template to create a basic EKS cluster and auto-install the SentinelOne Agent for K8s.
 
 ## Detailed Description
 
