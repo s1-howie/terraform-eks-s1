@@ -1,4 +1,4 @@
-# terraform-aks-s1
+# terraform-eks-s1
 A terraform template to create a basic EKS cluster and auto-install the SentinelOne Agent for K8s.
 
 ## Detailed Description
