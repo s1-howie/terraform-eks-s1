@@ -13,12 +13,21 @@ region          = "us-east-1"
 cluster_name    = "eks-s1-demo"
 node_count      = "2"             # The number of worker nodes to allocate for the EKS cluster
 cluster_version = "1.21"          # The version of Kubernetes you want to use.
-instance_type   = "t2.small"
+instance_type   = "t2.large"
 
 
 # The following S1-related variables can be left as is or be customized as you see fit.
-s1_repository_pull_secret_name = "s1-repo-pull-secret"
-s1_helper_image_tag            = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
-s1_agent_image_tag             = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
-s1_namespace                   = "sentinelone"
-helm_release_name              = "s1"
+s1_repository_pull_secret_name   = "s1-repo-pull-secret"
+s1_helper_image_tag              = "sp1-21.10.4" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+s1_agent_image_tag               = "sp1-21.10.4" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+helm_chart_version               = "21.10.3"
+s1_namespace                     = "sentinelone"
+helm_release_name                = "s1"
+agent_resources_requests_cpu     = "500m"
+agent_resources_requests_memory  = "1.0Gi"
+agent_resources_limits_cpu       = "900m"
+agent_resources_limits_memory    = "1.9Gi"
+helper_resources_requests_cpu    = "200m"
+helper_resources_requests_memory = "200Mi"
+helper_resources_limits_cpu      = "900m"
+helper_resources_limits_memory   = "1.9Gi"

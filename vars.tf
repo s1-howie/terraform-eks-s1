@@ -71,3 +71,42 @@ variable "helm_release_name" {
   description = "Helm Releaes Name to use for the Helm deployment"
   default     = "s1"
 }
+
+variable "helm_chart_version" {
+  description = "The version of the SentinelOne Helm chart to use.  Typically the version number will match the image build number."
+}
+
+variable "agent_resources_limits_cpu" {
+  description = "CPU Limit to be applied to the s1-agent pod."
+  default     = "900m"
+}
+variable "agent_resources_limits_memory" {
+  description = "Memory Limit to be applied to the s1-agent pod."
+  default     = "1.9Gi"
+}
+variable "helper_resources_limits_cpu" {
+  description = "CPU Limit to be applied to the s1-helper pod."
+  default     = "900m"
+}
+variable "helper_resources_limits_memory" {
+  description = "Memory Limit to be applied to the s1-helper pod."
+  default     = "1.9Gi"
+}
+
+
+variable "agent_resources_requests_cpu" {
+  description = "CPU Request to be applied to the s1-agent pod."
+  default     = "100m"
+}
+variable "agent_resources_requests_memory" {
+  description = "Memory Request to be applied to the s1-agent pod."
+  default     = "100Mi"
+}
+variable "helper_resources_requests_cpu" {
+  description = "CPU Request to be applied to the s1-helper pod."
+  default     = "100m"
+}
+variable "helper_resources_requests_memory" {
+  description = "Memory Request to be applied to the s1-helper pod."
+  default     = "100Mi"
+}
