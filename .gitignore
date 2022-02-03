@@ -31,3 +31,7 @@ override.tf.json
 
 # Ignore terraform.tfvars
 terraform.tfvars
+
+# Ignore generated kubeconfig files
+eks-kubeconfig
+kubeconfig_eks*
